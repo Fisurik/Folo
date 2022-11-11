@@ -1,7 +1,7 @@
 const cardBtn = document.querySelectorAll('.price__button')
 const priceCards = document.querySelectorAll('.price__card');
 
-
+/* s */
 cardBtn.forEach(e => {
     e.addEventListener('click', (event)=>{
         if (!event.target.classList.contains('.price__button')) {
