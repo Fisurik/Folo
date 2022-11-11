@@ -1,0 +1,98 @@
+.review{
+    margin-top: 194px;
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &__title {
+        @extend %title;
+        line-height: 46px;
+        font-size: 38px;
+        max-width: 273px;
+    }
+    &__items {
+        display: flex;
+        gap: 31px;
+    }
+    &__item {
+        max-width: 372px;
+        padding: 42px 74px 42px 45px;
+        border-radius: 40px;
+        background-color: #fff;
+        box-shadow: 0px 0px 10px #f8f8f8;
+    }
+    &__item-stars {
+        display: flex;
+        gap: 6px;
+        margin-bottom: 19px;
+    }
+    &__item-text {
+        width: 253px;
+        font-family: 'Inter';
+        font-style: italic;
+        font-size: 13px;
+        line-height: 20px;
+    }
+    &__item-author {
+        font-family: 'Poppins';
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 20px;
+        margin-top: 13px;
+    }
+    &__slider {
+        max-width: 700px;
+    }
+    &__button {
+        display: block;
+        border-radius: 7px;
+        font-family: 'Poppins'; 
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 27px;
+        text-transform: none;
+margin: 40px auto 0;
+        width: 250px;
+
+    }
+}
+
+@media (max-width: 1000px) {
+    .review {
+        margin-top: 85px;
+    }
+    .review__inner {
+        flex-direction: column;
+        align-items: center;
+    }
+    .review__title {
+        max-width: none;
+        text-align: center;
+    }
+    .review__slider {
+        margin-top: 30px;
+    }
+    .review__slider .slick-dots {
+        display: flex;
+        gap: 20px;
+        margin: 0 auto;
+        width: 90px;
+    }
+    .review__slider .slick-dots li {
+        font-size: 0;
+        width: 8px;
+        height: 8px;
+        border: 1px solid $blue;
+        border-radius: 50%;
+    }
+    .review__slider .slick-dots .slick-active {
+        background-color: $blue;
+    }
+}
+
+@media (max-width: 720px) {
+    .review__slider {
+        max-width: 383px;
+        }
+}

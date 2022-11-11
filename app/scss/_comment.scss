@@ -1,0 +1,50 @@
+.comment {
+    margin-top: 202px;
+    &__inner {
+        display: flex;
+        gap: 60px;
+    }
+    &__image {
+        min-width: 514px;
+    }
+    &__title {
+        @extend %title;
+        max-width: 383px;
+        margin-bottom: 38px;
+        line-height: 46px;
+        font-size: 38px;
+    }
+    &__text {
+        font-size: 14px;
+        opacity: 0.8;
+        line-height: 25px;
+        margin-bottom: 49px;
+    }
+}
+
+@media (max-width: 1150px) {
+    .comment__image {
+        min-width: 400px;
+    }
+}
+
+@media (max-width: 960px) { 
+    .comment__image {
+        min-width: 350px;
+    }
+}
+@media (max-width: 850px) { 
+    .comment {
+        margin-top: 70px;
+    }
+    .comment__content {
+        text-align: center;
+    }
+    .comment__title {
+        max-width: 570px;
+        margin: 0 auto 30px;
+    }
+    .comment__image {
+        display: none;
+    }
+}

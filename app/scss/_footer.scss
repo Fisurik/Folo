@@ -1,0 +1,157 @@
+.footer {
+    background-color: #080940;
+    color: #fff;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        padding: 105px 0 222px;
+    }
+    &__inner ul li {
+        font-size: 13px;
+        line-height: 30px;
+        opacity: 0.5;
+    color: #FFFFFF;
+    }
+    &__navigation {
+        display: flex;
+        justify-content: space-between;
+        width: 400px;
+        margin: 0 80px;
+    }
+    &__section-title {
+        cursor: pointer;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        margin-bottom: 52px;
+    }
+    &__write-for-us span{
+        text-decoration: underline;
+    }
+    &__contact-us {
+        position: relative;
+    }
+    &__contact-us-title {
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        margin-bottom: 52px;
+    }
+    &__contact-us p  {
+        font-size: 13px;
+        line-height: 30px;
+        opacity: 0.5;
+        color: #FFFFFF; 
+        & a {
+            padding-left: 3px;
+
+        }
+        & a:hover {
+            text-decoration: underline;
+        }
+    }
+    &__button {
+        margin-top: 22px;
+    }
+    &__button-decoration {
+        position: absolute;
+        transform: translateX(-100%);
+        bottom: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer__inner {
+        padding-bottom: 105px;
+    }
+    .footer__services {
+        margin-bottom: 30px;
+        width: 147px;
+    }
+    .footer__section-title {
+        position: relative;
+        margin-bottom: 20px;
+    }
+    .footer__section-title::after,
+    .footer__section-title::before {
+        content: '';
+        width: 10px;
+        height: 2px;
+        background-color: #fff;
+        position: absolute;
+        left: -25px;
+        top: 50%;
+    }
+    .footer__navigation {
+        display: block;
+        width: auto;
+    }
+    .footer__services-list, 
+    .footer__about-list {
+    display: none;
+    }
+    .footer__contact-us {
+        max-height: fit-content;
+    }
+    .footer__section-title::after {
+        transform: rotate(-40deg) translateX(46%);
+    }
+    .footer__section-title::before {
+        transform: rotate(40deg) translateX(-46%);
+    }
+
+    .active::before {
+        transform:  rotate(40deg) translateX(46%);
+    }
+    .active::after {
+        transform:  rotate(-40deg) translateX(-46%);
+    }
+}
+
+@media (max-width: 610px) {
+    .footer__inner {
+       display: grid;
+       grid-template-columns: auto auto;
+       grid-template-rows: auto auto;
+       row-gap: 20px;
+    }
+    .footer__navigation {
+        margin: 0;
+        height: fit-content;
+    }
+    .footer__logo {
+        margin-left: 40px;
+        grid-row: 1 / span 2;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer__inner {   
+    max-width: 460px;
+    grid-template-columns: 1fr ;
+    grid-template-rows: auto;
+    margin: 0 auto;
+    text-align: center;
+    }
+    .footer__logo {
+        margin-left: -20px;
+        margin-bottom: 20px;
+    }
+    .footer__inner div {
+        place-self: center;
+    }
+    .footer__section-title::after,
+    .footer__section-title::before {
+        left: -2px;
+    }
+    .footer__services-title::after,
+    .footer__services-title::before {
+        left: 10px;
+    }
+    .footer__button-decoration {
+        transform: translateX(-66%);
+        bottom: 15px;
+    }
+}
